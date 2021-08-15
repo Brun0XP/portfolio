@@ -1,7 +1,75 @@
 <template>
-  <Tutorial/>
+  <div
+    class="
+      relative
+      flex
+      items-top
+      justify-center
+      min-h-screen
+      bg-gray-900
+      sm:items-center sm:pt-0
+    "
+  >
+    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+      <div class="mt-12 mx-8 overflow-hidden p-6">
+        <h2 class="text-3xl leading-7 text-gray-50 font-semibold">Hi There!</h2>
+        <p class="text-4xl mt-6 text-gray-50">
+          I'M <span class="text-purple-500">BRUNO RODRIGUES</span>
+        </p>
+        <transition name="fade">
+          <p class="text-xl mt-16 text-purple-500">
+            {{ messages[messageIndex] }}
+          </p>
+        </transition>
+      </div>
+
+      <img
+        src="@/assets/images/home-main.svg"
+        class="flex justify-center pt-8 sm:pt-0"
+      />
+      <div class="flex justify-center pt-4 space-x-4 text-xl text-gray-300">
+        <a href="https://instagram.com/bds.rodrigues" target="_blank">
+          <i class="mdi mdi-instagram" />
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <i class="mdi mdi-twitter" />
+        </a>
+        <a href="https://github.com/Brun0XP" target="_blank">
+          <i class="mdi mdi-github" />
+        </a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    messages: [
+      'Open Source Contributor',
+      'Fast-learn developer',
+      'Self-taught developer',
+    ],
+    messageIndex: 0,
+  }),
+  mounted() {
+    setInterval(() => {
+      this.messageIndex =
+        this.messageIndex === this.messages.length - 1
+          ? 0
+          : this.messageIndex + 1
+    }, 5000)
+  },
+}
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
