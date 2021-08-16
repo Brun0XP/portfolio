@@ -17,7 +17,7 @@
             Hi There!
           </h2>
           <p class="text-4xl mt-6 text-gray-50">
-            I'M <span class="text-purple-500">BRUNO RODRIGUES</span>
+            I'M <span class="text-purple-500 font-bold">BRUNO RODRIGUES</span>
           </p>
           <Typewriter
             :type-array="[
@@ -69,23 +69,8 @@ export default {
 }
 </script>
 
-<style scoped>
-.fade-enter-active {
-  animation: fade-in-out 1s;
-}
-.fade-leave-active {
-  animation: fade-in-out 1s reverse;
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+<style>
+html {
+  font-family: Nunito;
 }
 </style>
