@@ -18,7 +18,7 @@ export default {
   css: [{ src: '@mdi/font/css/materialdesignicons.min.css' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-particles.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -45,12 +45,14 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      background_color: '#111827',
+      theme_color: '#111827',
     },
     manifest: {
       lang: 'en',
+      name: 'Portfolio de Bruno Rodrigues',
+      short_name: 'Portfolio',
       display: 'standalone',
-      theme_color: '#111827',
+      background_color: '#111827',
     },
   },
 
