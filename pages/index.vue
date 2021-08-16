@@ -19,15 +19,13 @@
           <p class="text-4xl mt-6 text-gray-50">
             I'M <span class="text-purple-500">BRUNO RODRIGUES</span>
           </p>
-          <div class="text-xl mt-16 text-purple-500 relative">
-            <transition name="fade">
-              <p
-                :key="messageIndex"
-                class="absolute"
-                v-text="messages[messageIndex]"
-              />
-            </transition>
-          </div>
+          <Typewriter
+            :type-array="[
+              'Open Source Contributor',
+              'Fast-learn developer',
+              'Self-taught developer',
+            ]"
+          />
         </div>
 
         <img
