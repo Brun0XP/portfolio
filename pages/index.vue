@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900">
+  <div class="bg-white dark:bg-gray-900">
     <vue-particles color="#B968C7" class="fixed w-full h-full" />
     <div
       class="
