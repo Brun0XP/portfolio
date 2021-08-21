@@ -21,7 +21,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [{ src: '@mdi/font/css/materialdesignicons.min.css' }],
+  css: [
+    { src: '@/assets/css/global.css' },
+    { src: '@mdi/font/css/materialdesignicons.min.css' },
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/vue-particles.js', ssr: false }],

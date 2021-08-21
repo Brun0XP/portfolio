@@ -1,5 +1,5 @@
 <template>
-  <p class="text-xl mt-16 text-purple-500">
+  <p class="text-xl md:text-3xl mt-16 text-purple-500">
     <span> {{ typeValue }}</span
     ><span
       class="cursor inline-block m-0.5 w-0.5 bg-purple-500"
