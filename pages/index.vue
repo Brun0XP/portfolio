@@ -1,6 +1,11 @@
 <template>
-    <Typewriter :type-array="messages" />
+  <Tutorial />
 </template>
 
-<script setup>
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'IndexPage',
+})
 </script>
